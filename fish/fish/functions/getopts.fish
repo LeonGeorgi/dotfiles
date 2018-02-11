@@ -1,0 +1,1 @@
+/home/leon/.config/fisherman/getopts/getopts.fish

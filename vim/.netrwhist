@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/leon/.vim/bundle/vim-colorscheme-primary/colors'
+let g:netrw_dirhist_2='/home/leon/.vim/bundle/vim-colorscheme-primary'
+let g:netrw_dirhist_3='/home/leon/.vim/bundle/vim-colorscheme-primary/colors'
+let g:netrw_dirhist_4='/home/leon/.config/nemo'
+let g:netrw_dirhist_5='/home/leon/packages'
+let g:netrw_dirhist_6='/home/leon/Dokumente/Studium/FSR/KIF'
+let g:netrw_dirhist_7='/home/leon/Dokumente/Studium/FSR/KIF/Sponsoren'
+let g:netrw_dirhist_8='/home/leon/.mutt/accounts'

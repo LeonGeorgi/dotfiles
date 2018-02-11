@@ -11,14 +11,16 @@
 
 set $mod Mod4
 set $bg1 /home/leon/Bilder/Wallpaper/212121.png
-
+#MUST BE LINE 15
+set $bgcolor 303030
 #gaps inner 15
 #gaps outer 5
 #smart_gaps on
 #smart_borders no_gaps
 for_window [class="^.*"] border pixel 3
 for_window [class="Termite" title="Power menu"] floating enable
-exec_always --no-startup-id feh --bg-fill $bg1
+#exec_always --no-startup-id feh --bg-fill $bg1
+exec_always --no-startup-id hsetroot -solid "#$bgcolor"
 exec_always --no-startup-id setxkbmap -layout de
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id termite -e 'sudo pacman -Syyu'

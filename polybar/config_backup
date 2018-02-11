@@ -8,7 +8,7 @@
 ;=====================================================
 
 [colors]
-background = #3a3a3a
+background = #212121
 ;background = #cc000000
 ;background = ${xrdb:color0}
 background-alt = ${colors.background}
@@ -54,8 +54,8 @@ font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=9:antialias=false;0
 font-2 = siji:pixelsize=10;1
 font-3 = FontAwesome:pixelsize=10;1
-font-4 = material\-wifi:pixelsize=12;1
-font-5 = Material Icons:pixelsize=12;1
+# font-4 = material-wifi:pixelsize=12;1
+font-4 = Material Icons:pixelsize=12;1
 
 modules-left = i3 backlight volume 
 modules-center = xwindow 
