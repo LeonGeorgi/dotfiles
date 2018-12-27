@@ -7,3 +7,10 @@ open_with
 xdg-open
 
 rename configstoreq
+delete
+search St
+search ß4
+search 04
+search ocea
+search Stu
+bulkrename 

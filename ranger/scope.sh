@@ -109,8 +109,10 @@ case "$mimetype" in
             highlight_format=ansi
         fi
         # try safepipe vimcat "$path" && { dump | trim; exit 5; }
-        try safepipe highlight --out-format=${highlight_format} "$path" && { dump | trim; exit 5; }
-        try safepipe pygmentize -f ${pygmentize_format} "$path" && { dump | trim; exit 5; }
+        #try safepipe echo "lol" && { dump | trim; exit 5; }
+        #try safepipe highlight --out-format=${highlight_format} "$path" && { dump | trim; exit 5; }
+        #try safepipe pygmentize -f ${pygmentize_format} "$path" && { dump | trim; exit 5; }
+        try mkdir -p $(dirname "/tmp$path") && head -100 "$path" > "/tmp$path" && vimcat "/tmp$path" && { dump | trim; exit 5; }
         exit 2;;
     # Ascii-previews of images:
     image/*)
