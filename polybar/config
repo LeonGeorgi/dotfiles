@@ -8,25 +8,28 @@
 ;=====================================================
 
 [colors]
-background = #3a3a3a
+background = ${xrdb:background:#3a3a3a}
 ;background = #cc000000
 ;background = ${xrdb:color0}
 background-alt = ${colors.background}
 ;foreground = ${xrdb:color7:#000}
 ;foreground = #dfdfdf
-foreground = ${xrdb:color7:#dfdfdf}
-foreground-alt = #8a8a8a
-foreground-icon = #ffffff
+foreground = ${xrdb:foreground:#dfdfdf}
+foreground-alt = ${xrdb:color8:#616161}
+foreground-icon = ${xrdb:foreground:#ffffff}
 ;primary = #cfb017
-primary = #ffffff
+primary = ${xrdb:foreground:#ffffff}
 secondary = #e60053
 ;secondary = #000000
-alert = #bd2c40
+alert = ${xrdb:color1:#f07178}
 ;accent = #cfb017
-accent = #8a8a8a
+;accent = #8a8a8a
+accent = ${xrdb:color8:#616161}
+
 accent-top = ${colors.background}
 
 [bar/top]
+enable-ipc = true
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 24
@@ -451,16 +454,16 @@ type = custom/menu
 
 format-spacing = 1
 
-label-open = 
-label-open-foreground = ${colors.secondary}
-label-close =  cancel
-label-close-foreground = ${colors.secondary}
+label-open =
+label-open-foreground = ${colors.alert}
+label-close =  cancel
+label-close-foreground = ${colors.alert}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
 
-menu-0-0 = reboot
+menu-0-0 = reboot
 menu-0-0-exec = menu-open-1
-menu-0-1 = power off
+menu-0-1 = power off
 menu-0-1-exec = menu-open-2
 
 menu-1-0 = cancel
@@ -468,7 +471,7 @@ menu-1-0-exec = menu-open-0
 menu-1-1 = reboot
 menu-1-1-exec = sudo reboot
 
-menu-2-0 = power off
+menu-2-0 = power off
 menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
