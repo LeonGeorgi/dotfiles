@@ -1,0 +1,65 @@
+:: default : chunkc border::color 0xffffffff
+:: resize : chunkc border::color 0xffffeb3b
+
+default < lalt - r ; resize 
+resize < escape ; default
+resize < lalt - r ; default
+
+lalt - left : chunkc tiling::window --focus west
+lalt - down : chunkc tiling::window --focus south
+lalt - up : chunkc tiling::window --focus north
+lalt - right : chunkc tiling::window --focus east
+
+lalt + shift - up : chunkc tiling::window --warp north
+lalt + shift - right : chunkc tiling::window --warp east
+lalt + shift - down : chunkc tiling::window --warp south
+lalt + shift - left : chunkc tiling::window --warp west
+
+shift + lalt - 0 : chunkc tiling::desktop --equalize
+
+lalt - 1 : chunkc tiling::desktop --focus 1
+lalt - 2 : chunkc tiling::desktop --focus 2
+lalt - 3 : chunkc tiling::desktop --focus 3
+lalt - 4 : chunkc tiling::desktop --focus 4
+lalt - 5 : chunkc tiling::desktop --focus 5
+lalt - 6 : chunkc tiling::desktop --focus 6
+lalt - 7 : chunkc tiling::desktop --focus 7
+lalt - 8 : chunkc tiling::desktop --focus 8
+lalt - 9 : chunkc tiling::desktop --focus 9
+
+shift + lalt - 1 : chunkc tiling::window --send-to-desktop 1
+shift + lalt - 2 : chunkc tiling::window --send-to-desktop 2
+shift + lalt - 3 : chunkc tiling::window --send-to-desktop 3
+shift + lalt - 4 : chunkc tiling::window --send-to-desktop 4
+shift + lalt - 5 : chunkc tiling::window --send-to-desktop 5
+shift + lalt - 6 : chunkc tiling::window --send-to-desktop 6
+
+# increase region size
+resize < left : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge west
+resize < down : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge south
+resize < up : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge north
+resize < right : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge east
+
+# decrease region size
+ resize < shift - left : chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge west
+ resize < shift - down : chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge south
+ resize < shift - up : chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge north
+ resize < shift - right : chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge east
+
+# set insertion point for focused container
+ctrl + lalt - 0x2C : chunkc tiling::window --use-insertion-point cancel
+ctrl + lalt - left : chunkc tiling::window --use-insertion-point west
+ctrl + lalt - down : chunkc tiling::window --use-insertion-point south
+ctrl + lalt - up : chunkc tiling::window --use-insertion-point north
+ctrl + lalt - right : chunkc tiling::window --use-insertion-point east
+
+shift + lalt - f : chunkc tiling::window --toggle native-fullscreen
+
+lalt + shift - r : chunkc tiling::desktop --rotate 90
+lalt + ctrl - r : chunkc tiling::desktop --rotate 270
+
+lalt - a : chunkc tiling::desktop --toggle offset
+
+lalt - m : chunkc tiling::desktop --mirror vertical
+
+alt - f : chunkc tiling::window --toggle fullscreen
