@@ -15,6 +15,7 @@ Plug 'sheerun/vim-wombat-scheme'
 Plug 'tpope/vim-commentary'
 Plug 'dag/vim-fish'
 Plug 'udalov/kotlin-vim'
+Plug 'lilydjwg/colorizer'
 
 call plug#end()
 
